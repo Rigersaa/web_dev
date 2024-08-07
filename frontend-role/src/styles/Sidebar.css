@@ -1,0 +1,72 @@
+/* Sidebar.css */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 200px;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it overlays other content */
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 24px;
+  }
+  
+  .sidebar h3 {
+    margin-top: 20px;
+  }
+  
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .sidebar-list li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-list li input {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      transform: translateY(0);
+      z-index: 1000; /* Ensure it overlays other content */
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  
+    .sidebar-content {
+      display: none;
+    }
+  
+    .sidebar.active .sidebar-content {
+      display: block;
+    }
+  }
+  
+
+  #root > div > div.main-content-wrapper > aside {
+    margin-left: 36rem;
+}

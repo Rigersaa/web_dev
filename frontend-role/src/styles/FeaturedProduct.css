@@ -1,0 +1,88 @@
+.featured-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.featured-product button {
+  position: absolute; /* Absolute positioning relative to the .featured-product-wrapper */
+  top: 10px; /* Adjust to position the button from the top */
+  left: 10px; /* Adjust to position the button from the left */
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 11px 58px;
+  cursor: pointer;
+  border-radius: 3px;
+  z-index: 200; /* Ensure the button stays above other elements */
+}
+
+.product-item {
+  width: 80%;
+  max-width: 1200px;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.product-details {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.recommendations {
+  flex: 1;
+}
+
+.recommendations h4 {
+  margin-bottom: 10px;
+}
+
+.recommendations .images {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.recommendation-image {
+  max-width: 100px;
+}
+
+h3, h4 {
+  margin-top: 0;
+}
+
+.additional-info {
+  margin-top: 20px;
+}
+
+#root > div > div.featured-product > div > div.additional-info > div {
+  text-align: end;
+}
+
+/* Responsiviteti */
+@media (max-width: 768px) {
+  .product-info {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .product-details {
+    margin-right: 0; 
+  }
+
+  .recommendations {
+    margin-top: 20px;
+  }
+}

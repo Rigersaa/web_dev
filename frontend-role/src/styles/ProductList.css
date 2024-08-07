@@ -1,0 +1,68 @@
+/* ProductList.css */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.product {
+  width: calc(33.33% - 20px); /* 3 items per row with spacing */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Adds a gap between the image and the text */
+}
+
+.product h3, .product p {
+  margin: 0; /* Removes any default margin */
+}
+
+.add-to-cart-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px; /* Adds some space above the button */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #cacaca;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product {
+    width: calc(50% - 20px); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: 100%; /* 1 item per row on very small screens */
+  }
+}
+
+.product {
+  width: calc(90.33% - 83px);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

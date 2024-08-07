@@ -1,0 +1,4 @@
+#root > div > div.featured-product > div > div.product-info > div.product-details > p.description {
+    text-align: left;
+    font-family: 'Archivo';
+}
