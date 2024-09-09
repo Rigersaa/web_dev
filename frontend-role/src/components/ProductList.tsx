@@ -21,12 +21,12 @@ const ProductList: React.FC<ProductListProps> = ({
   filterCategory,
   filterPrice,
 }) => {
-  // Filter products by category
+  
   const filteredProducts = products.filter(product => {
     if (filterCategory.length > 0 && !filterCategory.includes(product.category.toLowerCase())) {
       return false;
     }
-    // Filter products by price
+ 
     if (filterPrice !== '') {
       if (filterPrice === 20 && product.price >= 20) {
         return false;
@@ -44,7 +44,6 @@ const ProductList: React.FC<ProductListProps> = ({
     return true;
   });
 
-  // Sort products
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortType === 'alphabetically') {
       return a.name.localeCompare(b.name);
@@ -55,7 +54,7 @@ const ProductList: React.FC<ProductListProps> = ({
     }
   });
 
-  // Pagination logic
+ 
   const startIndex = (page - 1) * 6;
   const paginatedProducts = sortedProducts.slice(startIndex, startIndex + 6);
 

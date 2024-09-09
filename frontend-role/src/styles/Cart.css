@@ -33,3 +33,9 @@
     margin: 0 5px;
   }
   
+  .close-button {
+    /* background: none; */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
