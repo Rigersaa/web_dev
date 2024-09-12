@@ -11,7 +11,8 @@ import { mockProducts } from './mockData';
 import filterIcon from './assets/filter-icon.png';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
-import '../src/styles/Sidebar.css';
+
+
 
 const App: React.FC = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -34,6 +35,8 @@ const App: React.FC = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+
 
   const addToCart = (product: Product) => {
     setCartItems(prevItems => {
@@ -210,7 +213,7 @@ const App: React.FC = () => {
                 filterCategory={filterCategory}
                 filterPrice={filterPrice}
               />
-              <Pagination page={page} setPage={setPage} />
+               <Pagination page={page} setPage={setPage} />
             </main>
           </div>
           {isCartVisible && (

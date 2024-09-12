@@ -1,28 +1,31 @@
 /* ProductList.css */
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-}
+
 
 .product {
   width: calc(33.33% - 20px); /* 3 items per row with spacing */
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .product img {
   width: 100%;
-  height: auto;
-  margin-bottom: 10px; /* Adds a gap between the image and the text */
+  height: 200PX;
+  object-fit: cover; /* Adds a gap between the image and the text */
 }
 
-.product h3, .product p {
+ .product p {
   margin: 0; /* Removes any default margin */
+  font-weight: bold;
+  font-size: 20px;
 }
 
+.product h3{
+  font-size: 16px;
+  line-height: 1.6;
+}
 .add-to-cart-btn {
   background-color: black;
   color: white;
@@ -65,4 +68,24 @@
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.2s ease;
+ 
 }
+.product:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+

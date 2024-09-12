@@ -110,3 +110,9 @@ h3, h4 {
     margin-top: 20px;
   }
 }
+
+#root > div > div.featured-product > div > div.product-info > div.product-details > p.description{
+  padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}

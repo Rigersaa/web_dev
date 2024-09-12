@@ -1,34 +1,60 @@
-/* More specific CSS for labels and inputs */
-.sidebar .sidebar-list li label {
+.sidebar {
+  width: 250px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.sidebar h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar label {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  font-size: 14px;
+  color: #555;
 }
 
-.sidebar .sidebar-list li input[type="checkbox"],
-.sidebar .sidebar-list li input[type="radio"] {
-  margin-right: 8px;
-  transform: scale(1.1); /* Optional: To increase checkbox/radio button size */
+.sidebar input[type="checkbox"],
+.sidebar input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
 }
 
-.sidebar .sidebar-list li input {
-  vertical-align: middle; /* Ensures input aligns vertically with text */
+.sidebar li .category-section {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-.sidebar .sidebar-list li label {
-  display: inline-flex; /* Ensures inputs and text stay inline */
-  align-items: center;
+.sidebar .price-section {
+  margin-top: 20px;
 }
 
-.sidebar .sidebar-list li label input {
-  margin-right: 0.5rem; /* Adjust space between input and label text */
+.sidebar .price-section label {
+  margin-bottom: 5px;
 }
 
-h3 {
-  margin: 0 0 10px 0;
-  font-size: 16px;
-  color: #000;
-  font-weight: bold;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 5px;
+.sidebar li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 5px;
 }

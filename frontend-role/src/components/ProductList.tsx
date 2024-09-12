@@ -71,11 +71,7 @@ const ProductList: React.FC<ProductListProps> = ({
           </div>
         ))}
       </div>
-      {/* Pagination Controls */}
-      {/* <div className="pagination">
-        {page > 1 && <button onClick={() => setPage(page - 1)}>Previous</button>}
-        {startIndex + 6 < sortedProducts.length && <button onClick={() => setPage(page + 1)}>Next</button>}
-      </div> */}
+      
     </div>
   );
 };

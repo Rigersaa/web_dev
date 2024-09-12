@@ -15,21 +15,20 @@ const Sidebar: React.FC = () => {
       </div>
       <div className="sidebar-content">
         <h3>Category</h3>
-        <ul className="sidebar-list">
-          <li><label><input type="checkbox" name="category" /> People</label></li>
-          <li><label><input type="checkbox" name="category" /> Premium</label></li>
-          <li><label><input type="checkbox" name="category" /> Pets</label></li>
-          <li><label><input type="checkbox" name="category" /> Food</label></li>
-          <li><label><input type="checkbox" name="category" /> Landmarks</label></li>
-          <li><label><input type="checkbox" name="category" /> Cities</label></li>
-          <li><label><input type="checkbox" name="category" /> Nature</label></li>
-        </ul>
-        <h3>Price range</h3>
-        <ul className="sidebar-list">
-          <li><label><input type="radio" name="price" /> Lower than $20</label></li>
-          <li><label><input type="radio" name="price" /> $20 - $100</label></li>
-          <li><label><input type="radio" name="price" /> $100 - $200</label></li>
-          <li><label><input type="radio" name="price" /> More than $200</label></li>
+        <ul>
+          <li className="category-section">
+            <label><input type="checkbox" name="category" value="pets" />Pets</label>
+            <label><input type="checkbox" name="category" value="people" />People</label>
+            <label><input type="checkbox" name="category" value="food" />Food</label>
+            <label><input type="checkbox" name="category" value="landmarks" />Landmarks</label>
+          </li>
+          <h3>Price range</h3>
+          <li className="price-section">
+            <label><input type="radio" name="price" value="low" />$20 or less</label>
+            <label><input type="radio" name="price" value="mid" /> $20 - $100</label>
+            <label><input type="radio" name="price" value="high" />$100 - $200</label>
+            <label><input type="radio" name="price" value="premium" />More than $200</label>
+          </li>
         </ul>
       </div>
     </div>

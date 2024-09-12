@@ -1,41 +1,90 @@
-/* Cart item styles */
+/* Cart.css */
+
+/* Cart container */
+.cart {
+  padding: 1rem;
+}
+
+/* Cart item styling */
 .cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-  }
-  
-  .cart-item-image {
-    flex-shrink: 0;
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    margin-right: 10px;
-  }
-  
-  .cart-item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the div */
-  }
-  
-  .cart-item-info {
-    flex: 1;
-  }
-  
-  .cart-item-quantity {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cart-item-quantity button {
-    margin: 0 5px;
-  }
-  
-  .close-button {
-    /* background: none; */
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Cart item image */
+.cart-item-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+/* Cart item info */
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-item-price {
+  font-size: 1rem;
+  color: #333;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.quantity-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.quantity-display {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.cart-item-total-price {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.remove-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
 }

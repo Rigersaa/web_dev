@@ -8,7 +8,12 @@ interface FilteringProps {
 const Filtering: React.FC<FilteringProps> = ({ setFilterCategory, setFilterPrice }) => {
   return (
     <div className="filtering">
-      <label>Category: </label>
+      // FilterComponent.tsx
+<label className="flex items-center">
+  <input type="checkbox" className="checkbox mr-2" />
+  <span className="text-sm">Category Name</span>
+</label>
+
       <select onChange={(e) => setFilterCategory(e.target.value)}>
         <option value="">All</option>
         <option value="people">People</option>
@@ -16,7 +21,13 @@ const Filtering: React.FC<FilteringProps> = ({ setFilterCategory, setFilterPrice
         <option value="landmarks">Landmarks</option>
       </select>
       <label>Max Price: </label>
-      <input type="number" onChange={(e) => setFilterPrice(Number(e.target.value) || '')} />
+<input
+  type="number"
+  onChange={(e) => {
+    const price = Number(e.target.value);
+    setFilterPrice(price > 0 ? price : '');
+  }}
+/>
     </div>
   );
 };

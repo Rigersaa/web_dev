@@ -1,6 +1,6 @@
 import React from 'react';
 import { CartItem } from '../types';
-import '../styles/Cart.css'
+import '../styles/Cart.css';
 
 interface CartProps {
   items: CartItem[];
@@ -20,14 +20,33 @@ const Cart: React.FC<CartProps> = ({ items, removeFromCart, updateQuantity }) =>
               <img src={item.product.image.src} alt={item.product.image.alt} />
             </div>
             <div className="cart-item-info">
-              <p>{item.product.name}</p>
-              <p>${item.product.price.toFixed(2)}</p>
+              <p className="cart-item-name">{item.product.name}</p>
+              <p className="cart-item-price">${item.product.price.toFixed(2)}</p>
               <div className="cart-item-quantity">
-                <button onClick={() => updateQuantity(item.product.name, item.quantity - 1)}>-</button>
-                <span>{item.quantity}</span>
-                <button onClick={() => updateQuantity(item.product.name, item.quantity + 1)}>+</button>
+                <button 
+                  onClick={() => updateQuantity(item.product.name, item.quantity - 1)} 
+                  disabled={item.quantity === 1}
+                  className="quantity-button"
+                >
+                  -
+                </button>
+                <span className="quantity-display">{item.quantity}</span>
+                <button 
+                  onClick={() => updateQuantity(item.product.name, item.quantity + 1)} 
+                  className="quantity-button"
+                >
+                  +
+                </button>
+                <p className="cart-item-total-price">
+                  Total: ${(item.quantity * item.product.price).toFixed(2)}
+                </p>
               </div>
-              <button onClick={() => removeFromCart(item.product.name)}>Remove</button>
+              <button 
+                onClick={() => removeFromCart(item.product.name)} 
+                className="remove-button"
+              >
+                Remove
+              </button>
             </div>
           </div>
         ))

@@ -6,15 +6,14 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({ page, setPage }) => {
+  const handlePrev = () => setPage(prev => Math.max(prev - 1, 1));
+  const handleNext = () => setPage(prev => prev + 1);
+
   return (
     <div className="pagination">
-      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
-        Prev
-      </button>
-      <span>{page}</span>
-      <button onClick={() => setPage(page + 1)} disabled={page === Math.ceil(20 / 6)}>
-        Next
-      </button>
+      <button onClick={handlePrev} disabled={page <= 1}>Previous</button>
+      <span>Page {page}</span>
+      <button onClick={handleNext}>Next</button>
     </div>
   );
 };
